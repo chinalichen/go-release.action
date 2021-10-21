@@ -19,7 +19,7 @@ fi
 if [ -x "./build.sh" ]; then
   OUTPUT=`./build.sh "${CMD_PATH}"`
 else
-  go build "${CMD_PATH}" -o ${PROJECT_NAME}${EXT}
+  go build -o ${PROJECT_NAME}${EXT} "${CMD_PATH}"
   OUTPUT="${PROJECT_NAME}${EXT}"
 fi
 
